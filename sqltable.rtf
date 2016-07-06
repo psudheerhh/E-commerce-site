@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.4.10\
+-- http://www.phpmyadmin.net\
+--\
+-- Host: localhost:8889\
+-- Generation Time: Mar 13, 2016 at 08:07 AM\
+-- Server version: 5.5.42\
+-- PHP Version: 7.0.0\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `bookcart`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `bookdetails`\
+--\
+\
+CREATE TABLE `bookdetails` (\
+  `bookname` varchar(255) NOT NULL,\
+  `img` varchar(255) DEFAULT NULL,\
+  `cost` decimal(4,2) DEFAULT NULL,\
+  `stock` int(11) DEFAULT NULL,\
+  `author` varchar(255) DEFAULT NULL,\
+  `language` varchar(255) DEFAULT NULL,\
+  `length` int(11) DEFAULT NULL,\
+  `description` varchar(1000) DEFAULT NULL,\
+  `review` varchar(1000) DEFAULT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `bookdetails`\
+--\
+\
+INSERT INTO `bookdetails` (`bookname`, `img`, `cost`, `stock`, `author`, `language`, `length`, `description`, `review`) VALUES\
+('1984', 'a1984.jpg', '19.99', 20, 'George Orwell', 'English', 347, 'Eric Arthur Blair (25 June 1903 \'96 21 January 1950), who used the pen name George Orwell, was an English novelist, essayist, journalist and critic. His work is marked by lcid prose, awareness of social injustice, opposition to totalitarianism, and outspoken support of democratic socialism.', 'Orwell wrote literary criticism, poetry, fiction, and polemical journalism.Eric Arthur Blair was an important English writer that you probably already know by the pseudonym of George Orwell. He wrote quite a few books, but many believe that his more influential ones were Animal farm (1944) and 1984 (1948).In those two books he conveyed, metaphorically and not always obviously, what Soviet Russia meant to him.'),\
+('After the Crash', 'thecrash.jpg', '10.99', 60, 'Michel Bursi', 'English', 233, 'Just after midnight on December 23, 1980, a night flight bound for Paris plummets toward the Swiss Alps, crashing into a snowy mountainside. Within seconds flames engulf the plane, which is filled with holiday travelers. Of the 169 passengers, all but one perish.The sole survivor is a three-month-old girl--thrown from the airliner before fire consumes the cabin. But two infants were on board. ', 'A private detective is hired who spends 18 years investigating the truth and finally works it out - but we have to wait until the books end to discover the answer, by which time we are well past the point of caring.'),\
+('Analysis of Algorithms', 'daa.jpg', '19.99', 20, 'Edward Bender', 'English', 563, 'Discrete mathematics is fundamental to computer science, and interesting, challenging problems in discrete mathematics arise in programming languages, computer architecture, networking, distributed systems, database systems, artificial intelligence, theoretical computer science, and elsewhere.', 'There is an unfortunate division between computer science theory, and actual programming practice. Most programmers who are self-taught, pick up some theory through immersion. But what works well for natural language is not necessarily optimal for technical and scientific disciplines. The technical vocabulary of computer science and engineering is heavily mathematical, and this book provides a good introduction to the vocabulary, concepts, and methods of a rigorous approach to computing. Mastery of the concepts are essential for reliable programs in the "real" world.'),\
+('Design of Steel Structure', 'thesteel.jpg', '26.99', 10, 'Alan Williams', 'English', 233, 'Steel Structures Design: ASD/LRFD introduces the theoretical background and fundamental basis of steel design and covers the detailed design of members and their connections. This in-depth resource provides clear interpretations of the American Institute of Steel Construction (AISC) Specification for Structural Steel Buildings, 2010 edition, the American Society of Civil Engineers (ASCE) Minimum Design Loads for Buildings and Other Structures, 2010 edition, and the International Code Council (ICC) International Building Code, 2012 edition.', ' Coverage includes:Steel buildings and design criteria,Design loads,Behavior of steel structures under design loads,Design of steel structures under design loads,steel beams in flexure, steel beams for shear and torsion, compression members,Stability of frames,Design by inelastic analysis, of tension members, of bolted and welded connections,Plate girders and Composite construction.'),\
+('Game Of Thrones', 'GameOfThrone.jpg', '29.74', 40, 'George R. R. Martin', 'English', 1000, 'It hardly seems like 50 years since I picked up this book late one rainy night when it was first published, after my mom had been raving about the book for weeks, trying to get me to read it. Well, what the heck, the late movie was boring that evening and there was nothing else on the TV. next thing I knew, it was two oclock in the morning and I had just turned the final page on what was the most magical reading experience of my entire life.', 'From the opening line, "When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow..." Lee hooks the reader with a deceptively simple story of a Southern family and a Southern town caught up in a cataclysmic moral crisis, and keeps us enthralled till the very last word.'),\
+('GeoTechnical Engineering', 'geotech.jpg', '6.99', 20, 'Robert Day', 'English', 245, 'Fully updated to include the 2012 International Building Code (IBC), Geotechnical Engineers Portable Handbook, Second Edition, features a wealth of on-the-job geotechnical and construction related information in a convenient, quick-reference format. This practical resource is filled with essential data, formulas, and guidelines you can access right away. Detailed tables, charts, graphs, and illustrations are included throughout the book for ease of use in the field.', 'I bought this book to use as a quick reference for looking up various specs, practices, and conversions on the job sites.With Mr. Days handbook you can find what youre looking for in a matter of several minutes. '),\
+('Harry Potter', 'harrypotter.jpg', '49.99', 20, 'J. K. Rowling', 'English', 600, 'Now for the first time ever, J.K. Rowling seven bestselling Harry Potter books are available in a stunning paperback boxed set! The Harry Potter series has been hailed as \'93one for the ages\'94 by Stephen King and \'93a spellbinding saga\'92 by USA Today. And most recently, The New York Times called Harry Potter and the Deathly Hallows the \'93fastest selling book in history.\'94 This is the ultimate Harry Potter collection for Harry Potter fans of all ages!', 'I, like many other people, used to dislike Harry Potter. I had never actually read the books, but for some reason looked down on Potter fans, thinking them to be a bit off color. I was certain that the whole thing was highly overrated and that it had been blown way out of proportion like Twilight.'),\
+('Java', 'java.jpg', '10.99', 40, 'Allan vermullen', 'English', 500, 'Operating Systems: Internals and Design Principles is intended for use in a one- or two-semester undergraduate course in operating systems for computer science, computer engineering, and electrical engineering majors. It also serves as a useful reference for programmers, systems engineers, network designers and others involved in the design of computer products, information system and computer system personnel.', 'My "personal" opinion is based on 40 years of designing and implementing numerous operating systems for research (at CMU and other universities) and as commercial products (at DEC and other companies)--and on examining competitive books. I consider this to currently be the overall best college-level CS undergraduate OS textbook and supporting infrastructure.'),\
+('Mocking Bird', 'mockingbird.jpg', '6.99', 20, 'Harper Lee', 'English', 233, 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.', 'Compassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature., It hardly seems like 50 years since I picked up this book late one rainy night when it was first published, after my mom had been raving about the book for weeks, trying to get me to read it. Well, what the heck, the late movie was boring that evening and there was nothing else on the TV... next thing I knew, it was two oclock in the morning and I had just turned the final page on what was the most magical reading experience of my entire life.'),\
+('Never Let Her Go', 'nav.jpg', '14.01', 20, 'Paula Hawkins', 'English', 850, 'Rachel takes the same commuter train every morning. Every day she rattles down the track, flashes past a stretch of cozy suburban homes, and stops at the signal that allows her to daily watch the same couple breakfasting on their deck. She\'92s even started to feel like she knows them. \'93Jess and Jason,\'94 she calls them. Their life\'97as she sees it\'97is perfect. Not unlike the life she recently lost.And then she sees something shocking.', 'Rachel offers what she knows to the police, and becomes inextricably entwined in what happens next, as well as in the lives of everyone involved. Has she done more harm than good?Her husband Tom had an affair that resulted in a pregnancy. He divorced Rachel, married the "other woman" and now all three (husband, wife and child) are happily ensconced in the house that was once Rachels.'),\
+('Nightingale Woods', 'nightangile.jpg', '11.99', 20, 'Kathryn Woods', 'English', 233, 'Rachel Phillips, mid twenties, a little naive, rather gullible, has fallen for a married man. The thing is, hes also fallen for her. In too deep, Rachel and married man Steve, begin an affair and develop intense feelings for each other, knowing what theyre doing is wrong. But after nine months of lies and deceit, Steves wife Olivia finds out and gives him an ultimatum. It was inevitable that someones heart would get broken but Rachel truly believed it wouldnt be hers and certainly not twice within a matter of days. Does the flame reignite when they meet again after seventeen years? And is Steve still in love with Rachel, or has he moved on? Nightingale Woods is a down-to-earth romance focusing on the difficult issues infidelity creates, but with a humorous mixture of trying to overcome being the other woman.', 'Nightingale Woods is Kathryn Browns novel about being the other woman'),\
+('Operating Systems', 'operating.jpg', '12.99', 50, 'William Stallings', 'English', 453, 'Operating Systems: Internals and Design Principles is intended for use in a one- or two-semester undergraduate course in operating systems for computer science, computer engineering, and electrical engineering majors. It also serves as a useful reference for programmers, systems engineers, network designers and others involved in the design of computer products, information system and computer system personnel.', 'My "personal" opinion is based on 40 years of designing and implementing numerous operating systems for research (at CMU and other universities) and as commercial products (at DEC and other companies)--and on examining competitive books. I consider this to currently be the overall best college-level CS undergraduate OS textbook and supporting infrastructure.'),\
+('Power Systems', 'power.jpg', '23.99', 80, 'Steven Gregersen', 'English', 453, 'This book is designed to address the concerns of those whose only desire is to build a simple, small-scale solar energy system but dont know where to start (or end!). Weve been living off the grid for well over ten years now and the most common inquiry we get is from people who want to set up a small solar energy system to power a cabin or camper, or to keep a refrigerator and a few lights on if the grid goes down. Some have already tried and ended up with woefully inadequate systems lacking the power and balance needed for off-grid life.', 'He covered all the topics while keeping the examples and terms so the average DYI person should have no problem understanding the information.Overall, I think this was a very informative book and the DYI person should get plenty of useful information to design a Low-Budget Solar Power System.'),\
+('Romeo and Juliet', 'romeo.jpg', '6.99', 8, 'William Shakespeare', 'English', 92, 'Romeo and Juliet is a tragedy written by William Shakespeare early in his career about two young star-crossed lovers whose deaths ultimately reconcile their feuding families. It was among Shakespeares most popular plays during his lifetime and, along with Hamlet, is one of his most frequently performed plays. Today, the title characters are regarded as archetypal young lovers. Romeo and Juliet belongs to a tradition of tragic romances stretching back to antiquity. Its plot is based on an Italian tale, translated into verse as ', 'Romeo and Juliet by William Shakespeare is a heart wrenching play of love and pure devotion that inspires beautiful gestures of excitement and adventure. I have always wondered what it feels like to experience the surreal emotions of being a \'93star crossed lover\'94 and how it effects your life decisions.'),\
+('The Girl in the Red Coat', 'thegirlinthered.jpg', '12.99', 60, 'Kate Hamer', 'English', 789, 'Newly single mom Beth has one constant, gnawing worry: that her dreamy eight-year-old daughter, Carmel, who has a tendency to wander off, will one day go missing.And then one day, it happens: On a Saturday morning thick with fog, Beth takes Carmel to a local outdoor festival, they get separated in the crowd, and Carmel is gone.', 'As a parent, I have to admit that I didn\'92t find the initial part of the reading pleasant, always worried I would find out the \'91real reason\'92 Carmel had been abducted.'),\
+('The Girl on the Train', 'thegirl.jpg', '14.01', 20, 'Paula Hawkins', 'English', 700, 'Rachel takes the same commuter train every morning. Every day she rattles down the track, flashes past a stretch of cozy suburban homes, and stops at the signal that allows her to daily watch the same couple breakfasting on their deck. She\'92s even started to feel like she knows them. \'93Jess and Jason,\'94 she calls them. Their life\'97as she sees it\'97is perfect. Not unlike the life she recently lost.And then she sees something shocking. It\'92s only a minute until the train moves on, but it\'92s enough.', ' Now everythings changed. Unable to keep it to herself, Rachel offers what she knows to the police, and becomes inextricably entwined in what happens next, as well as in the lives of everyone involved. Has she done more harm than good?Her husband Tom had an affair that resulted in a pregnancy. He divorced Rachel, married the other woman and now all three (husband, wife and child) are happily ensconced in the house that was once Rachels.'),\
+('The Martian', 'themartian.jpg', '16.99', 10, 'Andy Weir', 'English', 563, 'Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, hes sure hell be the first person to die there.After a dust storm nearly kills him and forces his crew to evacuate while thinking him dead, Mark finds himself stranded and completely alone with no way to even signal Earth that he\'92s alive\'97and even if he could get word out, his supplies would be gone long before a rescue could arrive.', 'For me, though, typos and editing issues paled in comparison to the snowballing storyline, which I gladly admit is not for everyone.'),\
+('The Once and Future King', 'theonce.jpg', '6.04', 10, 'T.H.White', 'English', 323, 'T.H. Whites masterful retelling of the saga of King Arthur is a fantasy classic as legendary as Excalibur and Camelot, and a poignant story of adventure, romance, and magic that has enchanted readers for generations.', 'As this is my favorite book, I couldnt help but take a look at all the reviews. It seems to me people either love it (4 or 5 stars) or hate it (1 star to remarks of minus 50). This may be very confusing to prospective buyers.'),\
+('VLSI Design', 'vlsi.jpg', '16.99', 70, 'Neil Weste', 'English', 763, 'The Fourth Edition of CMOS VLSI Design: A Circuits and Systems perspective presents broad and in-depth coverage of the entire field of modern CMOS VLSI Design. The authors draw upon extensive industry and classroom experience to introduce today\'92s most advanced and effective chip design practices.', 'This book offers a good review of basics as well as more advanced CMOS design. While some sections are very lacking in examples, there is a lot of good information buried in the reading which keeps it interesting enough to actually read through (assuming you are pretty into what you do/read). The HDL examples are useful if you have access to the design tools you need to actually play with.'),\
+('When Dreams Travel', 'whendream.jpg', '2.34', 30, 'Githa Hariharan', 'English', 645, 'This novel takes up where "The Arabian Nights" left off and suggests what might have happened to the protagonists, Shahrzad the bride, Dunyazad the sister and Shahryar the sultan, when the story telling stopped.', 'A novel about storytelling and storytellers, especially female, typically powerless ones.  Dunyazad and a scheming maidservant with a peculiarly hairy mole meet and share stories, including many of a hair-covered woman who was eventually ostracised by her community -- revolving around the possibility that Shahrzad escaped and they can too, from the entrapments of the old 1001 Night story and the present concerns of their lives. When Dreams Travel is a curious, meandering book, beautifully written.');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `cart`\
+--\
+\
+CREATE TABLE `cart` (\
+  `bookname` varchar(255) NOT NULL,\
+  `cost` decimal(4,2) DEFAULT NULL,\
+  `Email` varchar(100) DEFAULT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `cart`\
+--\
+\
+INSERT INTO `cart` (`bookname`, `cost`, `Email`) VALUES\
+('Harry Potter', '49.99', 'king@gmail.com'),\
+('VLSI Design', '16.99', 'king@gmail.com');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `login`\
+--\
+\
+CREATE TABLE `login` (\
+  `firstname` varchar(30) NOT NULL,\
+  `lastname` varchar(30) NOT NULL,\
+  `Email` varchar(50) NOT NULL,\
+  `Password` varchar(255) DEFAULT NULL,\
+  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Dumping data for table `login`\
+--\
+\
+INSERT INTO `login` (`firstname`, `lastname`, `Email`, `Password`, `reg_date`) VALUES\
+('harsha', 'p', 'harsha@gmail.com', '$2y$11$ztzaljm6kLUcdigP54FvcerNCcvdvdllaJlPorz6rFnznvh04UwtS', '2016-03-13 05:23:54'),\
+('king', 'king', 'king@gmail.com', '$2y$11$9JmOc5wQFjy2KkvrPpqe2.6ffKDQZJVXTxmXrMKBwoyJhrqfr7phG', '2016-03-13 02:48:30'),\
+('ravi', 's', 'ravi@gmail.com', '$2y$11$j0LgjqBUtbPiME.LASY8Cu5xlc7aZvXvV6T1UCmFETtSlacvY9sbW', '2016-03-13 03:20:16');\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `bookdetails`\
+--\
+ALTER TABLE `bookdetails`\
+  ADD PRIMARY KEY (`bookname`);\
+\
+--\
+-- Indexes for table `login`\
+--\
+ALTER TABLE `login`\
+  ADD PRIMARY KEY (`Email`);\
+}

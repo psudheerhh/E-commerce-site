@@ -1,0 +1,78 @@
+<?php 
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0"); // Proxies.
+?>
+<!doctype html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    
+    <body >
+    <div id = "wrapper">
+            <div class = "callout">
+                <p><b> <img src="logo1.png" alt="logo"></b></p>
+            </div>
+            <div class = "callout-below">
+                
+            </div>
+            <header><br></header>
+            
+                <h1>Login</h1>
+                    <form id ="f" action="myform.php" method="POST" >
+                    
+                    <label>Email </label>
+                    <input type="text" name="Email" id = "username">
+                    
+                    <label>Password</label>
+                    <input type="password" name="Password" id="password">
+                 <button class="button" type= "submit">Login&nbsp;&nbsp;&nbsp;</button>  
+                   <p>Need an account, Its free. <a href="sign-up.html">Sign-Up here</a></p>
+          
+                </form>    
+
+            
+            <div class ="clearfix"></div>
+			
+			<footer>
+                <ul>
+					<li><a href = "contact.html">Contact Us</a></li>
+                    <li><a href = "aboutUs.html">About Us</a></li>
+                </ul>     
+			</footer>
+		</div>
+		<p class = "copyright">&#169; Copyright BookCart, 2016</p>
+		<hr>
+    </body>
+</html>
+
+<script type="text/javascript">
+    
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "user123" && password == "password123"){
+alert ("Login successfully");
+window.location = "home.html"; // Redirecting to other page.
+return true;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+
+</script>

@@ -1,0 +1,95 @@
+<?php 
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0"); // Proxies.
+?>
+<!doctype html>
+<html>
+    <head>
+        <title>SignUp Page</title>
+        <meta charset="UTF-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="style1.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    
+    <body id="wrapper">
+        <div class = "callout">
+                <p><b> <img src="logo1.png" alt="logo"></b></p>
+            </div>
+            <div class = "callout-below">
+                
+            </div>
+            <header><br></header>
+            
+               
+                <h1>Sign-Up</h1>
+                    <form id="f" action="sign-up.php" method ="POST">
+                    <label>First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+
+                    <label>Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                    
+                    <label>Email address</label>
+                    <input type="email" name="Email" placeholder="Email address" id = "emailAdd">
+                    
+                    <label>Password</label>
+                    <input type="password" name="Password" id = "passO" placeholder="Password">
+                    
+                    <label>Confirm Password</label>
+                    <input type="password" name="Confirm Password" id = "passC" onmouseleave ="checkPassword()" placeholder=" Confirm Password">
+                   
+                    <label>Select Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">India</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                    
+                    <!-- <input type="submit" name="Submit" value="Submit" onclick ="location.href='home.html';">-->
+                   <button type= "submit" onClick="location.href='home.html';">Submit&nbsp;&nbsp;&nbsp;</button>  
+          
+                </form>
+           <div class ="clearfix"></div>
+            
+            <footer>
+                <ul>
+                    <li><a href = "contact.html">Contact Us</a></li>
+                    <li><a href = "aboutUs.html">About Us</a></li>
+                </ul>     
+            </footer>
+        <p class = "copyright">&#169; Copyright BookCart, 2016</p>
+        <hr>
+    </body>
+
+
+
+</html>
+
+
+
+
+<script type="text/javascript">
+    function validate() {
+        var email = document.getElementById("emailAdd").value;
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            //var address = document.getElementById[email].value;
+            if (reg.test(email) == false) 
+            {
+                alert('Invalid Email Address');
+                return (false);
+            }
+ }
+ function checkPassword(){
+    var c = document.getElementById('passC').value;
+    var p = document.getElementById('passO').value;
+
+    if(c != p){
+        alert('Password and confirm password is not same');
+        return (false);
+    }
+ }
+
+
+</script>
